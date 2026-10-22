@@ -34,4 +34,5 @@ class CustomRewardWrapper(gym.Wrapper):
       custom_reward = reward  # Anders de standaard reward
 
     return state, custom_reward, terminated, truncated, info
+```
 3. Moet je zelf de NES ROM uploaden?Bij de bibliotheek gym-super-mario-bros hoeft dit gelukkig niet.Deze bibliotheek is zo ontworpen dat de benodigde NES-ROM automatisch wordt meegeleverd en geladen via de onderliggende emulator-koppeling (nes-py) wanneer je pip install gym-super-mario-bros draait.   Je hoeft dus zelf geen illegale ROM-bestanden van het internet te plukken of handmatig te uploaden; het werkt direct zodra je de package installeert. (Dit in tegenstelling tot bijvoorbeeld OpenAI Retro, waar je soms wel zelf ROMs moet importeren).
