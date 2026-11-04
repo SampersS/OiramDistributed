@@ -1,0 +1,28 @@
+https://www.geeksforgeeks.org/machine-learning/q-learning-in-python/
+
+potentiele reward is een weighted sum van alle verwachte waardes, per stap vanaf de huidige state.
+Q table entries:
+Q(S,A)←Q(S,A)+α(R+γ*Q(S′,A′)−Q(S,A))
+Where,
+
+    S is the current state.
+    A is the action taken by the agent.
+    S' is the next state the agent moves to.
+    A' is the best next action in state S'.
+    R is the reward received for taking action A in state S.
+    γ (Gamma) is the discount factor which balances immediate rewards with future rewards.
+    α (Alpha) is the learning rate determining how much new information affects the old Q-values.
+
+de ϵ-greedy Policy:
+Exploration: de agent neemt een random actie, die mogelijke rewards leren mogelijk maakt. kans is ϵ.
+Exploitation: De agent neemt de beste actie volgens de Q tabel. kans = 1−ϵ.
+
+Bellman's equation: recursieve formule die gebruikt wordt om de waarde en optimale actie van een state te detemineren.
+    Q(s,a)=R(s,a)+γmaxa​Q(s′,a)
+
+Where:
+
+    Q(s, a) is the Q-value for a given state-action pair.
+    R(s, a) is the immediate reward for taking action a in state s.
+    γ is the discount factor, representing the importance of future rewards.
+    maxaQ(s′,a)maxa​Q(s′,a) is the maximum Q-value for the next state s' and all possible actions.
